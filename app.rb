@@ -45,7 +45,7 @@ def time (dist, speed)
   dist / speed
 end
 
-# final cost function
+# final cost function for trip calculator
 def final_cost (speed, mpg, cost)
   if speed > 60 && mpg > speed && mpg > 0
     mpg = mpg - ((speed - 60) * 2)
@@ -55,16 +55,16 @@ def final_cost (speed, mpg, cost)
 end
 
 # start of calculator
-puts "Welcome, would you like to the advanced, basic calculator, BMI or trip"
+puts "Welcome, would you like to the (1)advanced, (2)basic calculator, (3)BMI or (4)trip"
 type = gets.chomp
 
 # basic calculator
-if type == "basic"
-  puts "Would you like to do addition, subtraction, multiplication or division"
+if type == "2"
+  puts "Would you like to do (1)addition, (2)subtraction, (3)multiplication or (4)division"
   function = gets.chomp
 
   # addition
-  if function == "addition"
+  if function == "1"
     puts "Enter the first number"
     num1 = gets.to_i
     puts "Enter the second number"
@@ -73,7 +73,7 @@ if type == "basic"
   end
 
   # subtraction
-  if function == "subtraction"
+  if function == "2"
     puts "Enter the first number"
     num1 = gets.to_i
     puts "Enter the second number"
@@ -82,7 +82,7 @@ if type == "basic"
   end
 
   # multiplication
-  if function == "multiplication"
+  if function == "3"
     puts "Enter the first number"
     num1 = gets.to_i
     puts "Enter the second number"
@@ -91,7 +91,7 @@ if type == "basic"
   end
 
   # division
-  if function == "division"
+  if function == "4"
     puts "Enter the first number"
     num1 = gets.to_i
     puts "Enter the second number"
@@ -101,12 +101,12 @@ if type == "basic"
 end
 
 # advanced calculator
-if type == "advanced"
-  puts "Would you like to do power or square root?"
+if type == "1"
+  puts "Would you like to do (1)power or (2)square root?"
   function = gets.chomp
 
   # power
-  if function == "power"
+  if function == "1"
     puts "Enter the first number"
     num1 = gets.to_i
     puts "Enter the power"
@@ -115,7 +115,7 @@ if type == "advanced"
   end
 
   # square root
-  if function == "square root"
+  if function == "2"
     puts "Enter the first number"
     num1 = gets.to_i
     square_root(num1)
@@ -123,12 +123,12 @@ if type == "advanced"
 end
 
 # BMI calculator
-if type == "BMI"
-  puts "Are you using imperial or metric?"
+if type == "3"
+  puts "Are you using (1)imperial or (2)metric?"
   measurement = gets.chomp
 
   # imperial BMI
-  if measurement == "imperial"
+  if measurement == "1"
     puts "Enter your weight in pounds"
     weight = gets.to_f
     puts "Enter your height in inches"
@@ -137,7 +137,7 @@ if type == "BMI"
   end
 
   # metric BMI
-  if measurement == "metric"
+  if measurement == "2"
     puts "Enter your weight in kilograms"
     weight = gets.to_f
     puts "Enter your height in metres"
@@ -147,7 +147,7 @@ if type == "BMI"
 end
 
 # trip calculator
-if type == "trip"
+if type == "4"
   puts "Please enter the distance(miles) you are travelling"
   dist = gets.to_f
   puts "Please enter the fuel efficiency(mpg) of your travel"
